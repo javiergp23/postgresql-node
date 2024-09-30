@@ -16,6 +16,7 @@ router.delete('/users/:id', (req, res) => {
 
     res.send('Eliminando usuario')
 })
+
 router.put('/users/:id', (req, res) => {
     res.send('Actualizando usuario')
 })
