@@ -12,6 +12,7 @@ router.get('/users/:id', (req, res) => {
 router.post('/users', (req, res) => {
     res.send('Creando usuario')
 })
+
 router.delete('/users/:id', (req, res) => {
 
     res.send('Eliminando usuario')
