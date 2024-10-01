@@ -17,6 +17,9 @@ importers:
       pg:
         specifier: ^8.13.0
         version: 8.13.0
+      postgresql-node:
+        specifier: 'file:'
+        version: 'file:'
 
 packages:
 
@@ -270,6 +273,9 @@ packages:
   postgres-interval@1.2.0:
     resolution: {integrity: sha512-9ZhXKM/rw350N1ovuWHbGxnGh/SNJ4cnxHiM0rxE4VN41wsg8P8zWn9hv/buK00RP4WvlOyr/RBDiptyxVbkZQ==}
     engines: {node: '>=0.10.0'}
+
+  'postgresql-node@file:':
+    resolution: {directory: '', type: directory}
 
   proxy-addr@2.0.7:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
@@ -611,6 +617,15 @@ snapshots:
   postgres-interval@1.2.0:
     dependencies:
       xtend: 4.0.2
+
+  'postgresql-node@file:':
+    dependencies:
+      express: 4.21.0
+      morgan: 1.10.0
+      pg: 8.13.0
+    transitivePeerDependencies:
+      - pg-native
+      - supports-color
 
   proxy-addr@2.0.7:
     dependencies:
