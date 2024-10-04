@@ -3,8 +3,9 @@ import {pool} from '../db.js';
 
 const router = Router();
 
-router.get('/users', (req, res) => {
-    res.send('Obteniendo usuarios')
+router.get('/users', async (req, res) => {
+   const {rows} =await pool.query('SELECT * FROM users')
+   console.log(rows)
 })
 
 router.get('/users/:id', (req, res) => {
